@@ -1,0 +1,317 @@
+@import 'var';
+@import 'mixin';
+
+@include main;
+
+main {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('../slike/intro.jpg');
+
+    header {
+        width: 100%;
+        height: 5em;
+        color: #fff;
+
+        nav, .meni {
+            padding: 1em 2em;
+        }
+
+        .meni {  
+            height: 100%;
+            width: 7%;
+            float: right;
+            background: $red;
+            
+        img {
+            height: 100%;
+			margin: 0 auto;
+        }
+      }
+      
+      nav {
+          text-align: right;
+          float: left;
+          height: 100%;
+          width: 93%;
+          background-color: $hfColor;
+
+          ul {
+            list-style: none;
+            padding-top: 0.7em;
+
+            li {
+                display: inline-block;
+                margin-right: 5em;
+				font-size: 1.2em;
+
+                a {
+					color: #fff;
+					vertical-align: middle;
+					text-decoration: none;
+
+					&:hover { text-decoration: underline; }
+				}
+
+            }
+        }
+      }
+
+    }
+}
+
+section {
+    width: 100%;
+    margin: auto;
+    @include clearfix;
+}
+
+.uvod {
+   
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    
+
+    h1, h2, h3 {
+        font-weight: normal;
+        background: rgba(55, 66, 73, 0.6);
+        vertical-align: baseline;
+    }
+    h1 {
+        font-size: 3em;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+}
+
+.button {
+    
+    margin: 3em 2em;
+    padding: 1em 2em;
+    border-radius: 60px;
+    background-color: #fff;
+    color: $hedlineColor;
+    border: 1px solid $hoverColor;
+    cursor: pointer;
+
+    &:hover {
+        background: $hoverColor;
+        color: white;
+    }
+}
+
+.filter {
+    text-align: right;
+}
+
+.icon {
+    background-color: $sectionColor;
+    .kontejner {
+        width: 50%;
+        margin: auto;
+        height: 10em;
+    
+        @include clearfix;
+        
+        a, .info {
+            padding: 1em 2em;   
+        }
+
+        .info {
+            display: none;
+            margin-top: 2em;
+            float: left;
+            text-align: left;
+            h2 {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            p {
+                color: $red;
+            }
+        }
+
+        a {
+            float: left;
+            height: 100%;
+            .image {
+                border-radius: 50%;
+                height: 100%;
+            }
+        }
+
+        a:hover + .info{
+            display: block;
+            cursor: pointer;
+        }
+
+        
+    }
+
+    .kontejner2 {
+        width: 50%;
+        margin: auto;
+        height: 10em;
+    
+        @include clearfix;
+        
+        a, .info {
+            padding: 1em 2em;   
+        }
+
+        .info {
+            display: none;
+            margin-top: 2em;
+            float: right;
+            text-align: left;
+            h2 {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            p {
+                color: $red;
+            }
+        }
+
+        a {
+            float: right;
+            height: 100%;
+            .image {
+                border-radius: 50%;
+                height: 100%;
+            }
+        }
+
+        a:hover + .info{
+            display: block;
+            cursor: pointer;
+        }
+
+        
+    }
+}
+
+.kontakt, .pricing {
+    h1 {
+        font-size: 2em;
+		color: $fonrColor;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 1.5em;
+    }
+
+    
+}
+
+.pricing {
+    padding: 2.5em 16%;
+    color: $fonrColor;
+    text-align: center;
+    
+    
+    .pricingTable {
+        width: 60%;
+        border-collapse: collapse;
+        margin: 2.5em auto;
+
+        th, td {
+            padding: 0.2em;
+        }
+
+        .orange {
+            background-color: $red;
+            color: white;
+        }
+
+        .darkCol {
+            background-color: $hfColor;
+            color: white;
+            font-weight: bold;
+        }
+
+        thead {
+			.darkCol {
+				border-right: 1px solid $hfColor;
+			}
+		}
+
+		tbody {
+			td {
+				border: 1px solid $hfColor;
+			}
+		}
+    }
+}
+
+.pricingButton { display: none; }
+
+.kontakt {
+    padding: 2.5em 16%;
+    background-color: $sectionColor;
+
+    .map {
+        float: left;
+        width: 40%;
+        padding: 1em;
+
+        iframe {
+            width: 100%;
+        }
+    }
+    
+    form{ 
+        width: 50%;
+		margin: 1em;
+		float: right;
+        padding: 1em;
+        background-color: $red;
+
+        .contactInput {
+            float: left;
+			padding: .5em;
+			color: $hfColor;
+			border: none;
+			margin: 1em;
+        }
+    }
+
+    select {
+        width: 20%;
+        padding: 10em;
+    }
+
+    .contactInput[type="text"] {
+        float: right;
+        width: 70%;
+    }
+
+    .contactInput[type="email"] {
+        width: 96%;
+    }
+
+    textarea.contactInput {
+        width: 96%;
+    }
+}
+
+footer {
+    background-color: $hfColor;
+    padding: 1em 2em;
+    text-align: center;
+    color: white;
+    span {
+        color: $red;
+    }
+}
+
+
+    
